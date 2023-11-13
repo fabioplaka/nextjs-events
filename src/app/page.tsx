@@ -6,6 +6,7 @@ import { EventList } from "./events/components";
 
 function Home() {
   const featuredEvents = getFeaturedEvents();
+
   return (
     <div>
       <EventList items={featuredEvents} />

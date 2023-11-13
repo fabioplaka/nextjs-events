@@ -29,7 +29,7 @@ const EventItem: React.FC<EventItemProps> = ({
 
   const formattedAddress = location.replace(", ", "\n");
 
-  const exploreEventLink = `/events/${id}`;
+  const exploreLink = `/events/${id}`;
 
   return (
     <li className={classes.item}>
@@ -47,7 +47,7 @@ const EventItem: React.FC<EventItemProps> = ({
           </div>
         </div>
         <div className={classes.actions}>
-          <UIButton link={exploreEventLink}>
+          <UIButton link={exploreLink}>
             <span>Explore Event</span>
             <span className={classes.icon}>
               <ArrowRightIcon />
