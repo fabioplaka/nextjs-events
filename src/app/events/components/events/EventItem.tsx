@@ -6,13 +6,13 @@ import { DateIcon } from "@/icons/date-icon";
 import { AddressIcon } from "@/icons/address-icon";
 import { ArrowRightIcon } from "@/icons/arrow-right-icon";
 
-type EventItemProps = {
+interface EventItemProps {
   title: string;
   image: string;
   date: string;
   location: string;
   id: string;
-};
+}
 
 const EventItem: React.FC<EventItemProps> = ({
   date,

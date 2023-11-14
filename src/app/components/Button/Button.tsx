@@ -3,16 +3,24 @@ import React from "react";
 
 import classes from "./button.module.css";
 
-type UIButtonProps = {
+interface UIButtonProps {
   children: React.ReactNode;
-  link: string;
-};
+  link?: string;
+  onClick?: () => void;
+}
 
-const UIButton: React.FC<UIButtonProps> = ({ children, link }) => {
+const UIButton: React.FC<UIButtonProps> = ({ children, link, onClick }) => {
+  if (link) {
+    return (
+      <Link href={link} legacyBehavior>
+        <a className={classes.btn}>{children}</a>
+      </Link>
+    );
+  }
   return (
-    <Link href={link} legacyBehavior>
-      <a className={classes.btn}>{children}</a>
-    </Link>
+    <button onClick={onClick} className={classes.btn}>
+      {children}
+    </button>
   );
 };
 

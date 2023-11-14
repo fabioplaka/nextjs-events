@@ -3,9 +3,7 @@ import React from "react";
 
 import classes from "./main-header.module.css";
 
-interface MainHeaderProps {}
-
-const MainHeader: React.FC<MainHeaderProps> = ({}) => {
+const MainHeader: React.FC = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
